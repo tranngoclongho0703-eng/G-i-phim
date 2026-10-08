@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bạn muốn xem phim gì</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Bạn muốn xem phim gì</h1>
+      <!-- Dòng phụ đã bị loại theo yêu cầu -->
+    </header>
+
+    <section class="search-section" aria-label="Tìm phim">
+      <form id="searchForm" class="search-form" novalidate>
+        <label for="query" class="visually-hidden">Nhập yêu cầu xem phim</label>
+        <div class="input-row">
+          <input
+            id="query"
+            name="query"
+            type="search"
+            placeholder="Ví dụ: phim hành động, phim tâm lý, diễn viên Tom Hanks..."
+            autocomplete="off"
+            required
+            aria-required="true"
+          />
+          <button id="submitBtn" type="submit" class="btn primary" aria-label="Tìm phim">
+            Tìm
+          </button>
+        </div>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite" hidden>
+        Đang tìm...
+      </div>
+    </section>
+
+    <section id="resultsSection" class="results-section" aria-label="Kết quả gợi ý" hidden>
+      <h2 class="results-title">Đây là những phim mình nghĩ sẽ phù hợp với bạn</h2>
+      <ul id="resultsList" class="results-list" aria-live="polite"></ul>
+    </section>
+
+    <section id="emptySection" class="empty-section">
+      <p class="empty-note">Nhập đề xuất hoặc mô tả loại phim bạn muốn ở trên để nhận gợi ý.</p>
+    </section>
+
+    <footer class="footer">
+      <small>Gợi ý được sinh bởi hệ thống — giao diện thuần túy hiển thị kết quả.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
